@@ -1,7 +1,7 @@
 package ethers
 
 import (
-	ERC20 "fraktal/go-mev-bot/contracts/ERC20"
+	ERC20 "CopperProtocol/CopperChain/contracts/ERC20"
 
 	"github.com/ethereum/go-ethereum/common"
 )

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"math/big"
 	"os"
@@ -30,8 +31,16 @@ func ClearScreen() {
 		cmd.Run()
 	}
 }
-func main() {
 
+func main() {
+	ctx := context.Background()
+	ctx, cancel := context.WithCancel(ctx)
+
+	// c := &config{}
+
+	defer func() {
+		cancel()
+	}()
 	SplashScreen()
 }
 
